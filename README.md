@@ -28,3 +28,5 @@ The entire details are stored in history table. It shows the date and time when 
 customer returned the car and also total rent and other details that we have.
 The admin also having the feature to view the customer details , reservation
 details, car details and history
+
+Refer this pdf for more : https://github.com/MuruganArumugam/Online-Car-Rental-System-using-Java-and-Eclipse-Netbeans-IDE/blob/main/Online_car_rental_system_IP_Lab_Project_doc.pdf
