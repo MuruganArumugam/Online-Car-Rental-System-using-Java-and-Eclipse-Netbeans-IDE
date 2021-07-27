@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Admin-FAST MOTORS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        .form-group label {width: 40%;}
+        .form-horizontal {width: 50%; margin: 20px auto; text-align: center; border: 1px solid #ccc; border-radius: 30px; padding: 20px 0;}
+        .form-group .form-control {width: 40%; display: inline-block;}
+        h1 {color:green;}
+        h2 {color:white;}
+         p {color:red; font-size:200%;}
+        label {color:orange;}
+        body {text-align: center; background-color:black;}
+        .button1 {
+        float:right;
+        margin-right:20px;
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: orange;
+        border-radius: 6px;
+        outline: none;
+      }
+      .button {
+       
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: orange;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+    <body>
+        <h1><b>Welcome Admin</b></h1><br>
+        <a class="button1" href="Home.html">Logout</a>
+        <br>
+        <br>
+        <h2><b>Do you want to record a Pick-Up for a reservation?</b></h2>
+        <div class="container">
+            <form class="form-horizontal" role="form" action="http://localhost:8080/cars/PickUp" method="POST"><br>
+                <div class="form-group">
+                    <label for="reservationid">Reservation ID</label>
+                    <input type="number" class="form-control" name="resid" placeholder="Enter the Reservation ID here">
+                </div>
+                <div class="form-group">
+                    <label for="licenseid">Driver's License ID</label>
+                    <input type="input" class="form-control" name="licenseno" placeholder="Enter the Driver's License ID here">
+                </div>
+                <div class="form-group">
+                    <label for="ccname">Name as on Credit card</label>
+                    <input type="input" class="form-control" name="ccname" placeholder="Enter the Card Holder's Name here">
+                </div>
+                <div class="form-group">
+                    <label for="ccnumber">Credit Card Number</label>
+                    <input type="number" class="form-control" name="ccnumber" placeholder="Enter the Credit Card Number here">
+                </div>
+                <div class="form-group">
+                    <label for="ccexpiryyear">Year of Expiry Date</label>
+                    <input type="input" class="form-control" name="ccyear" placeholder="Enter the Year of Expiry Date here">
+                </div>
+                <div class="form-group">
+                    <label for="ccexpirymonth">Month of Expiry Date</label>
+                    <input type="input" class="form-control" name="ccmonth" placeholder="Enter the Month of Expiry Date here">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="number" class="form-control" name="cvv" placeholder="Enter CVV here">
+                </div><br>
+                <button type="submit" class="button"><b>Confirm Pick-Up</b></button><br><br>
+            </form>
+        </div><br>
+        <h2><b>Do you want to record a Return for a Pick-Up?</b></h2>
+        <div class="container">
+            <form class="form-horizontal" role="form" action="http://localhost:8080/cars/Return" method="post"><br>
+                <div class="form-group">
+                    <label for="reservationid">Reservation ID</label>
+                    <input type="number" class="form-control" name="resid" placeholder="Enter the Reservation ID here">
+                </div>
+                <div class="form-group">
+                    <label for="vin">Car id</label>
+                    <input type="input" class="form-control" name="cid" placeholder="Enter the VIN here">
+                </div><br>
+                <button type="submit" class="button"><b>Confirm Return</b></button><br><br>
+            </form>
+        </div><br>
+        
+         <h2><b>Do you want to add a new car?</b></h2>
+        <div class="container">
+            <form class="form-horizontal" role="form" action="AddCar" method="post"><br>
+                <div class="form-group">
+                    <label for="reservationid">Car ID</label>
+                    <input type="number" class="form-control" name="carid" placeholder="Enter the Car ID here">
+                </div>
+                <div class="form-group">
+                    <label for="licenseid">Car Type</label>
+                    <input type="input" class="form-control" name="cartype" placeholder="Enter the Car Type here">
+                </div>
+                  <div class="form-group">
+                    <label for="vin">Car Rent per day</label>
+                    <input type="input" class="form-control" name="rent" placeholder="Enter the Car Rent per day here">
+                </div><br>
+                <div class="form-group">
+                    <label for="vin">Vehicle Identification Number</label>
+                    <input type="input" class="form-control" name="vin" placeholder="Enter the VIN here">
+                </div><br>
+                <button type="submit" class="button"><b>Add car</b></button><br><br>
+            </form>
+        </div><br>
+        
+   
+           <h2><b>Information display</b></h2>
+        <div class="container">
+           <form class="form-horizontal" role="form" action="AddCar" method="post">
+           <center><a class="button" href="Cardetails.jsp">Car Details</a></center>
+        <br>
+          <center><a class="button" href="Reservationdetails.jsp">Reservation Details</a></center>
+        <br>
+          <center><a class="button" href="Customerdetails.jsp">Customer Details</a></center>
+        <br>
+         <center> <a class="button" href="History.jsp">History</a></center>
+        <br>
+        
+     </form>
+        </div><br>
+        
+    </body>
+</html>
